@@ -1,0 +1,184 @@
+.main-half{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 85%;
+	justify-content: space-between;
+}
+
+#about-left-section{
+	width: 40%;
+}
+
+#about-right-section{
+	background-color: none;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: end;
+	margin-right: 10px;
+	opacity: 0;
+}
+
+.about-info-section{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transform: translateY(10%);
+	transition: all 0.5s ease-in-out;
+}
+.about-left-section{
+	display: flex;
+	align-items: center;
+	width: 30%;
+	overflow-x: hidden;
+}
+
+.about-right-section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	overflow-x: hidden;
+}
+
+.about-title{
+	font-family: neue-haas-unica, sans-serif;
+	font-size: 250%;
+	font-weight: 300;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.1s cubic-bezier(.76,-0.01,.23,1);
+	padding: 0px 10px;
+	cursor: grab;
+}
+
+.about-title:hover{
+	background-color: black;
+	color: white;
+}
+
+
+.about-text{
+	padding: 10px;
+	font-family: neue-haas-unica, sans-serif;
+	text-align: start;
+	font-size: var(--font-size-main);
+	word-break: keep-all;
+	line-height: 20px;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.underlined{
+	text-decoration: underline 1px black;
+}
+
+.link-wrapper{
+	padding: 15px 20px;
+	display: block;
+}
+
+.link{
+	display: inline-block;
+	color: black;
+	font-family: neue-haas-unica, sans-serif;
+	text-align: start;
+	font-size: var(--font-size-main);
+	font-weight: 400;
+	margin: var(--font-margin-main) 0px;
+}
+
+.link:hover{
+	color: #DCFA0A;
+}
+
+#about-map-section{
+	width: 100%;
+	height: 40%;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transform: translateY(10%);
+	transition: all 0.5s ease-in-out;
+}
+
+#about-half-border{
+	position: absolute;
+	top: 0%;
+	left: 30%;
+	transform: translateX(-50%);
+	width: var(--border-px);
+	height: 0%;
+	transition: all 1s cubic-bezier(.76,-0.01,.23,1) 0.2s;
+	background-color: black;
+}
+
+.about-info-border-bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: var(--border-px);
+	width: 0%;
+	transition: all 1s cubic-bezier(.76,-0.01,.23,1) 0.4s;
+	background-color: black;
+}
+
+#map{
+	transition: all 0.2s ease-in-out;
+	opacity: 0;
+}
+
+.about-el-show{
+	opacity: 1 !important;
+}
+
+@media screen and (max-width: 768px) {
+	/* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+
+	.main-half{
+		display: block;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+	}
+
+	.about-left-section{
+		display: none;
+		width: 50%;
+		height: 100%;
+	}
+	
+	.about-right-section{
+		width: 100%;
+	}
+
+	.about-text{
+		opacity: 1;
+	}
+
+	#about-half-border{
+		display: none;
+	}
+
+	#map{
+		opacity: 1;
+	}
+
+	#about-map-section{
+		height: 50%;
+	}
+
+	.about-text{
+		padding: 20px;
+		font-family: neue-haas-unica, sans-serif;
+		text-align: start;
+		font-size: var(--font-size-main);
+		word-break: keep-all;
+	}
+}

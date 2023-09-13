@@ -1,0 +1,199 @@
+#main-project-section{
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.main-project-img{
+	opacity: 0;
+	transition: all 0.5s cubic-bezier(0,.66,.79,.76) !important;
+	filter: grayscale(100%);
+	margin: 80px;
+	cursor: grab;
+	transform: translateY(5%);
+}
+
+.main-project-img:hover{
+	filter: none;
+}
+
+#about-text-wrapper{
+	font-family: neue-haas-unica, sans-serif;
+	font-size: var(--font-size-main);
+	font-weight: 400;
+	padding: 50px;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 20%;
+	/* top: 50%;
+	left: 50%; */
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	background-color: #DCFA0A;
+	border: solid 1px black;
+	/* transition: opacity 0.2s cubic-bezier(0,.66,.79,.76) !important; */
+	z-index: 1000;
+	filter: drop-shadow(0 0 1px #000);
+}
+
+#about-text{
+	/* display: none; */
+	word-break: keep-all;
+}
+
+#esc-btn-wrapper{
+	/* display: none; */
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	margin: 10px;
+	cursor: grab;
+	transform: rotate(0deg);
+	transform-origin: center;
+	/* background-color: white; */
+	width: 30px;
+	height: 30px;
+	transition: all 0.2s cubic-bezier(0,.66,.79,.76) !important;
+}
+
+#esc-btn-wrapper:hover{
+	transform: rotate(45deg);
+}
+
+.esc-line{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* width: 20px;
+	height: 1px; */
+	background-color: black;
+
+}
+
+#esc-1{
+	/* transform: rotate(90deg);
+	transform-origin: center; */
+	width: 1px;
+	height: 25px;
+}
+#esc-2{
+	width: 25px;
+	height: 1px;
+}
+
+.link-wrapper{
+	padding: 15px 20px;
+	display: block;
+}
+
+.link{
+	display: inline-block;
+	color: black;
+	font-family: neue-haas-unica, sans-serif;
+	text-align: start;
+	font-size: var(--font-size-main);
+	font-weight: 400;
+	margin: var(--font-margin-main) 0px;
+}
+
+.link:hover{
+	color: #DCFA0A;
+}
+
+nav{
+	width: 100vw;
+	position: fixed;
+	top: 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-btn{
+	position: fixed;
+	background-color: white;
+	border: none;
+	color: black;
+	font-family: neue-haas-unica, sans-serif;
+	font-size: var(--font-size-large);
+	font-weight: 400;
+	cursor: grab;
+	margin: 10px 25px;
+}
+
+.menu-btn:hover{
+	background-color: black;
+	color: white;
+}
+
+#about-btn{
+	top: 15%;
+	left: 3%;
+}
+
+#works-btn{
+	top: 15%;
+	right: 3%;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+	/* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+	
+	#header-float-section{
+		display: flex;
+		padding: 10px;
+		overflow-x: hidden;
+	}
+
+	#header-logo{
+		width: 100%;
+	}
+	.main-project-img{
+		margin: 50px;
+		cursor: grab;
+		transform: translateY(5%);
+	}
+	#about-text-wrapper{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+		width: 70%;
+		height: 40%;
+		filter: drop-shadow(0, 0, 15px, #000);
+	}
+
+	#esc-btn-wrapper{
+		margin: 5px;
+	}
+	#esc-1{
+		/* transform: rotate(90deg);
+		transform-origin: center; */
+		width: 1px;
+		height: 20px;
+	}
+	#esc-2{
+		width: 20px;
+		height: 1px;
+	}
+	#about-btn{
+		top: 15%;
+		left: 2%;
+	}
+	
+	#works-btn{
+		top: 15%;
+		right: 2%;
+	}
+}

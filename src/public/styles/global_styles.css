@@ -1,0 +1,223 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+input, textarea, button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+:root{
+	--font-size-main : 14px;
+	--font-size-large : 17px;
+	--font-margin-main : 3px;
+	--border-px : 1px;
+}
+
+body {
+	line-height: 1;
+	background-color: none;
+	overflow-x: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header{
+    display: flex;
+	height: 10%;
+    justify-content: space-between;
+	position: fixed;
+    top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 10px;
+	transition: background-color 0.2s ease-in-out;
+	background-color: white;
+}
+
+.header-static{
+	position: relative;
+}
+
+#header-float-section{
+	display: flex;
+	padding: 10px;
+	overflow-x: hidden;
+}
+
+@-webkit-keyframes slide{
+	0%{
+		transform: translateX(0%);
+	}100%{
+		transform: translateX(-100%);
+	}
+}
+
+#header-logo{
+    width: 40%;
+	padding: 0px 60px;
+    height: auto;
+    cursor: grab;
+	animation: slide 5s linear infinite;
+}
+
+
+#footer{
+	background-color: white;
+	position: fixed;
+	height: 3%;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	transform: translateY(100%);
+	transition: transform 1s ease-in-out;
+}
+
+#footer-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer-border-top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: var(--border-px);
+	width: 0%;
+	transition: all 1s cubic-bezier(.76,-0.01,.23,1) 0.1s;
+	background-color: black;
+}
+
+#header-border-bottom{
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: var(--border-px);
+	width: 0%;
+	transition: all 1s cubic-bezier(.76,-0.01,.23,1) 0.1s;
+	background-color: black;
+}
+
+
+#footer-text{
+	font-family: neue-haas-unica, sans-serif;
+	font-size: var(--font-size-main);
+	font-weight: 400;
+	text-align: center;
+	margin: 0px 10px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px) {
+	/* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+	:root{
+		--font-size-main : 11px;
+		--font-size-large : 14px;
+	}
+	
+	#header-float-section{
+		display: flex;
+		padding: 10px;
+		overflow-x: hidden;
+	}
+
+	#header-logo{
+		width: 100%;
+	}
+	.main-project-img{
+		margin: 50px;
+		cursor: grab;
+		transform: translateY(5%);
+	}
+
+	.main-half{
+		display: block;
+		width: 100%;
+		height: auto;
+		justify-content: space-between;
+	}
+
+	#about-left-section{
+		width: 50%;
+		height: 100%;
+	}
+	
+	#about-right-section{
+		background-color: none;
+		height: 70%;
+		display: flex;
+		justify-content: center;
+		margin: 20px 10px;
+		padding: 50px 0px;
+	}
+
+	#map{
+		height: 500px !important;
+		width: auto;
+		filter: grayscale(100%);
+		transition: all 0.1s ease-in-out;
+		border: solid 1.5px black;
+	}
+
+	.about-text{
+		padding: 20px;
+		font-family: neue-haas-unica, sans-serif;
+		text-align: start;
+		font-size: large;
+		word-break: keep-all;
+	}
+	#footer{
+		height: 4%;
+	}
+}
