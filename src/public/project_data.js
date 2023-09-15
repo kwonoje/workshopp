@@ -48,20 +48,5 @@ export default[
       "url" : "/WORKSHOP-P",
       "img" : ["../public/images/works_img/w_004_1.jpg", "../public/images/works_img/w_004_2.jpg", "../public/images/works_img/w_004_3.jpg", "../public/images/works_img/w_004_4.jpg", "../public/images/works_img/w_004_5.jpg", "../public/images/works_img/w_004_6.jpg", "../public/images/works_img/w_004_7.jpg"]
     },
-    {
-      "index" : "007",
-      "location" : "서울",
-      "year" : 2023,
-      "type" : "HOUSE",
-      "url" : "/WORKSHOP-P",
-      "img" : ["../public/images/works_img/w_004_1.jpg","../public/images/works_img/w_004_3.jpg", "../public/images/works_img/w_004_2.jpg", "../public/images/works_img/w_004_3.jpg", "../public/images/works_img/w_004_4.jpg", "../public/images/works_img/w_004_5.jpg", "../public/images/works_img/w_004_6.jpg", "../public/images/works_img/w_004_7.jpg"]
-    },
-    {
-      "index" : "008",
-      "location" : "경기",
-      "year" : 2023,
-      "type" : "HOUSE",
-      "url" : "/WORKSHOP-P",
-      "img" : ["../public/images/works_img/w_008_1.png","../public/images/works_img/w_004_1.jpg","../public/images/works_img/w_004_3.jpg", "../public/images/works_img/w_004_2.jpg", "../public/images/works_img/w_004_3.jpg", "../public/images/works_img/w_004_4.jpg", "../public/images/works_img/w_004_5.jpg", "../public/images/works_img/w_004_6.jpg", "../public/images/works_img/w_004_7.jpg"]
-    }
+    
 ]
